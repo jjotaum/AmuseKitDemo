@@ -9,19 +9,24 @@
 /* Begin PBXBuildFile section */
 		E996535628C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996534628C2B32800D279A3 /* AmuseKitDemoApp.swift */; };
 		E996535728C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996534628C2B32800D279A3 /* AmuseKitDemoApp.swift */; };
-		E996535828C2B32900D279A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996534728C2B32800D279A3 /* ContentView.swift */; };
-		E996535928C2B32900D279A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996534728C2B32800D279A3 /* ContentView.swift */; };
 		E996535A28C2B32900D279A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E996534828C2B32900D279A3 /* Assets.xcassets */; };
 		E996535B28C2B32900D279A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E996534828C2B32900D279A3 /* Assets.xcassets */; };
+		E996536928C2B35500D279A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996536828C2B35500D279A3 /* MainView.swift */; };
+		E996536A28C2B35500D279A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996536828C2B35500D279A3 /* MainView.swift */; };
+		E996536D28C2B37700D279A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996536C28C2B37700D279A3 /* MainViewController.swift */; };
+		E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996536C28C2B37700D279A3 /* MainViewController.swift */; };
+		E996537128C2B52600D279A3 /* AmuseKit in Frameworks */ = {isa = PBXBuildFile; productRef = E996537028C2B52600D279A3 /* AmuseKit */; };
+		E996537428C2B53600D279A3 /* AmuseKit in Frameworks */ = {isa = PBXBuildFile; productRef = E996537328C2B53600D279A3 /* AmuseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E996534628C2B32800D279A3 /* AmuseKitDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseKitDemoApp.swift; sourceTree = "<group>"; };
-		E996534728C2B32800D279A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E996534828C2B32900D279A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E996534D28C2B32900D279A3 /* AmuseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmuseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E996535328C2B32900D279A3 /* AmuseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmuseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E996535528C2B32900D279A3 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		E996536828C2B35500D279A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E996536C28C2B37700D279A3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E996537128C2B52600D279A3 /* AmuseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E996537428C2B53600D279A3 /* AmuseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,14 +55,16 @@
 				E996534528C2B32800D279A3 /* Shared */,
 				E996535428C2B32900D279A3 /* macOS */,
 				E996534E28C2B32900D279A3 /* Products */,
+				E996537228C2B53600D279A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		E996534528C2B32800D279A3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E996536B28C2B36800D279A3 /* Controllers */,
+				E996536428C2B33400D279A3 /* Views */,
 				E996534628C2B32800D279A3 /* AmuseKitDemoApp.swift */,
-				E996534728C2B32800D279A3 /* ContentView.swift */,
 				E996534828C2B32900D279A3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -78,6 +87,29 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		E996536428C2B33400D279A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E996536828C2B35500D279A3 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E996536B28C2B36800D279A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E996536C28C2B37700D279A3 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E996537228C2B53600D279A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +126,9 @@
 			dependencies = (
 			);
 			name = "AmuseKitDemo (iOS)";
+			packageProductDependencies = (
+				E996537028C2B52600D279A3 /* AmuseKit */,
+			);
 			productName = "AmuseKitDemo (iOS)";
 			productReference = E996534D28C2B32900D279A3 /* AmuseKitDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 			dependencies = (
 			);
 			name = "AmuseKitDemo (macOS)";
+			packageProductDependencies = (
+				E996537328C2B53600D279A3 /* AmuseKit */,
+			);
 			productName = "AmuseKitDemo (macOS)";
 			productReference = E996535328C2B32900D279A3 /* AmuseKitDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +180,9 @@
 				Base,
 			);
 			mainGroup = E996534028C2B32800D279A3;
+			packageReferences = (
+				E996536F28C2B52600D279A3 /* XCRemoteSwiftPackageReference "AmuseKit" */,
+			);
 			productRefGroup = E996534E28C2B32900D279A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,8 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E996535828C2B32900D279A3 /* ContentView.swift in Sources */,
+				E996536928C2B35500D279A3 /* MainView.swift in Sources */,
 				E996535628C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
+				E996536D28C2B37700D279A3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E996535928C2B32900D279A3 /* ContentView.swift in Sources */,
+				E996536A28C2B35500D279A3 /* MainView.swift in Sources */,
 				E996535728C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
+				E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -338,6 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,6 +489,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E996536F28C2B52600D279A3 /* XCRemoteSwiftPackageReference "AmuseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:jjotaum/AmuseKit.git";
+			requirement = {
+				branch = release/0.4.1;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E996537028C2B52600D279A3 /* AmuseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E996536F28C2B52600D279A3 /* XCRemoteSwiftPackageReference "AmuseKit" */;
+			productName = AmuseKit;
+		};
+		E996537328C2B53600D279A3 /* AmuseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E996536F28C2B52600D279A3 /* XCRemoteSwiftPackageReference "AmuseKit" */;
+			productName = AmuseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E996534128C2B32800D279A3 /* Project object */;
 }

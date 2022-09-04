@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "amusekit",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:jjotaum/AmuseKit.git",
+      "state" : {
+        "branch" : "release/0.4.1",
+        "revision" : "4a0924f3f627e28701ee4c2f94772d28b3a1a51f"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    }
+  ],
+  "version" : 2
+}

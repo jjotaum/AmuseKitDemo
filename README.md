@@ -5,7 +5,10 @@
 
 ### Demo Content
 
-The current demo app contains targets for macOS & iOS demos of catalog search using [AmuseKit](https://github.com/jjotaum/AmuseKit), also previews for Music Videos & Songs result can be played.
+- Targets for macOS & iOS.
+- Complete sample implementation of Search for Catalog Resources.
+- Albums, Artists, Playlists & Stations details view.
+- Plays Songs & MusicVideos previews using `AVPlayer`.
 
 ### Before Running.
 

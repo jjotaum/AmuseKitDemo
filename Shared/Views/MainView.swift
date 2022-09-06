@@ -5,18 +5,17 @@
 //  Created by Jota Uribe on 2/09/22.
 //
 
-import AmuseKit
 import AVFoundation
 import SwiftUI
 
 extension MainView {
     struct Model {
-        var albums: [AmuseKit.Album] = []
-        var artists: [AmuseKit.Artist] = []
-        var musicVideos: [AmuseKit.MusicVideo] = []
-        var playlists: [AmuseKit.Playlist] = []
-        var songs: [AmuseKit.Song] = []
-        var stations: [AmuseKit.Station] = []
+        var albums: [MediaItemCollection] = []
+        var artists: [MediaItemCollection] = []
+        var musicVideos: [MediaItem] = []
+        var playlists: [MediaItemCollection] = []
+        var songs: [MediaItem] = []
+        var stations: [MediaItemCollection] = []
     }
 }
 
@@ -43,48 +42,22 @@ struct MainView: View {
     private func contentView() -> some View {
         List {
             SectionView(title: "Albums", elements: controller.model.albums, content: { album in
-                elementView(title: album.attributes?.name,
-                            subTitle: album.attributes?.artistName,
-                            imageURL: album.attributes?.artwork.formattedURL()) {
-                    // Do nothing
-                }
+                mediaItemView(album)
             })
             SectionView(title: "Artists", elements: controller.model.artists, content: { artist in
-                elementView(title: artist.attributes?.name,
-                            imageURL: nil) {
-                    // Do nothing
-                }
+                mediaItemView(artist)
             })
             SectionView(title: "Music Videos", elements: controller.model.musicVideos, content: { musicVideo in
-                elementView(title: musicVideo.attributes?.name,
-                            imageURL: musicVideo.attributes?.artwork.formattedURL()) {
-                    if let stringURL = musicVideo.attributes?.previews.first?.url, let url = URL(string: stringURL) {
-                        player.replaceCurrentItem(with: .init(url: url))
-                        player.play()
-                    }
-                }
+                mediaItemView(musicVideo)
             })
             SectionView(title: "Playlists", elements: controller.model.playlists, content: { playlist in
-                elementView(title: playlist.attributes?.name,
-                            subTitle: playlist.attributes?.curatorName,
-                            imageURL: playlist.attributes?.artwork?.formattedURL()) {
-                    // Do nothing
-                }
+                mediaItemView(playlist)
             })
             SectionView(title: "Songs", elements: controller.model.songs, content: { song in
-                elementView(title: song.attributes?.name,
-                            imageURL: song.attributes?.artwork.formattedURL()) {
-                    if let stringURL = song.attributes?.previews.first?.url, let url = URL(string: stringURL) {
-                        player.replaceCurrentItem(with: .init(url: url))
-                        player.play()
-                    }
-                }
+                mediaItemView(song)
             })
             SectionView(title: "Stations", elements: controller.model.stations, content: { station in
-                elementView(title: station.attributes?.name,
-                            imageURL: station.attributes?.artwork.formattedURL()) {
-                    // Do nothing
-                }
+                mediaItemView(station)
             })
         }
         .listStyle(.plain)
@@ -93,34 +66,34 @@ struct MainView: View {
     }
     
     @ViewBuilder
-    private func elementView(title: String?, subTitle: String? = nil, imageURL: URL?, onTapGesture: @escaping () -> Void) -> some View {
-        HStack {
-            AsyncImage(url: imageURL) { image in
-                image.resizable()
-            } placeholder: {
-                Rectangle()
+    private func mediaItemView(_ mediaItem: MediaItem) -> some View {
+        if let mediaCollection = mediaItem as? MediaItemCollection {
+            NavigationLink {
+                MediaItemCollectionDetailsView(model: .init(title: mediaCollection.title,
+                                                            artworkURL: mediaCollection.artworkURL,
+                                                            items: mediaCollection.items))
+            } label: {
+                MediaItemListView(model: .init(title: mediaCollection.title,
+                                               subTitle: mediaCollection.subTitle,
+                                               artworkURL: mediaCollection.thumbURL))
             }
-            .frame(width: 48, height: 48)
-            .cornerRadius(4)
-            
-            VStack(alignment: .leading) {
-                Text(title ?? "<unknown>")
-                    .font(.headline)
-                    .lineLimit(1)
-                Text(subTitle ?? "")
-                    .font(.subheadline)
-                    .lineLimit(1)
+
+        } else {
+            MediaItemListView(model: .init(title: mediaItem.title,
+                                           subTitle: mediaItem.subTitle,
+                                           artworkURL: mediaItem.thumbURL)).onTapGesture {
+                guard let url = mediaItem.previewURL else { return }
+                player.replaceCurrentItem(with: .init(url: url))
+                player.play()
             }
         }
-        .contentShape(Rectangle())
-        .onTapGesture(perform: onTapGesture)
     }
 }
 
-struct SectionView<Element: Identifiable, Content: View>: View {
+struct SectionView<Content: View>: View {
     let title: String
-    let elements: [Element]
-    let content: (Element) -> Content
+    let elements: [MediaItem]
+    let content: (MediaItem) -> Content
     
     var body: some View {
         Section {
@@ -129,7 +102,7 @@ struct SectionView<Element: Identifiable, Content: View>: View {
                     .font(.headline)
                     .foregroundColor(.secondary)
             } else {
-                ForEach(elements) { element in
+                ForEach(elements, id: \.id) { element in
                     content(element)
                 }
             }

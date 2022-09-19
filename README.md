@@ -10,7 +10,7 @@
 - Albums, Artists, Playlists & Stations details view.
 - Plays Songs & MusicVideos previews using `AVPlayer`.
 
-![Demo](https://github.com/jjotaum/AmuseKit/capture.gif)
+![Demo](https://github.com/jjotaum/AmuseKitDemo/blob/main/capture.gif)
 
 ### Before Running.
 

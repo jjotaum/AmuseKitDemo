@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:jjotaum/AmuseKit.git",
       "state" : {
-        "revision" : "070d59aa9d61b2a1d8fe0722ab9196e0bfa76407",
-        "version" : "0.4.1"
+        "revision" : "3cff7fc19e47d9366635a4852ee298aaadb73af3",
+        "version" : "0.4.2"
       }
     },
     {

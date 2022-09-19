@@ -69,9 +69,13 @@ struct MainView: View {
     private func mediaItemView(_ mediaItem: MediaItem) -> some View {
         if let mediaCollection = mediaItem as? MediaItemCollection {
             NavigationLink {
-                MediaItemCollectionDetailsView(model: .init(title: mediaCollection.title,
-                                                            artworkURL: mediaCollection.artworkURL,
-                                                            items: mediaCollection.items))
+                MediaItemCollectionDetailsView(
+                    controller: .init(dataProvider: controller.amuseProvider,
+                                      id: mediaItem.id,
+                                      title: mediaCollection.title,
+                                      artworkURL: mediaCollection.artworkURL,
+                                      items: mediaCollection.items)
+                )
             } label: {
                 MediaItemListView(model: .init(title: mediaCollection.title,
                                                subTitle: mediaCollection.subTitle,

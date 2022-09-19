@@ -25,6 +25,8 @@
 		E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996536C28C2B37700D279A3 /* MainViewController.swift */; };
 		E996537128C2B52600D279A3 /* AmuseKit in Frameworks */ = {isa = PBXBuildFile; productRef = E996537028C2B52600D279A3 /* AmuseKit */; };
 		E996537428C2B53600D279A3 /* AmuseKit in Frameworks */ = {isa = PBXBuildFile; productRef = E996537328C2B53600D279A3 /* AmuseKit */; };
+		E9EEEB7328D89836008C165D /* MediaItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEEB7228D89836008C165D /* MediaItemCollectionViewController.swift */; };
+		E9EEEB7428D89836008C165D /* MediaItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEEB7228D89836008C165D /* MediaItemCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,7 @@
 		E996535528C2B32900D279A3 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		E996536828C2B35500D279A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E996536C28C2B37700D279A3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E9EEEB7228D89836008C165D /* MediaItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E996536C28C2B37700D279A3 /* MainViewController.swift */,
+				E9EEEB7228D89836008C165D /* MediaItemCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +266,7 @@
 				E996535628C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536D28C2B37700D279A3 /* MainViewController.swift in Sources */,
 				E95A56EB28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */,
+				E9EEEB7328D89836008C165D /* MediaItemCollectionViewController.swift in Sources */,
 				E95A56F728C7F54E0096333F /* MediaItemListView.swift in Sources */,
 				E95A56F228C7ED850096333F /* MediaItem.swift in Sources */,
 			);
@@ -276,6 +281,7 @@
 				E996535728C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */,
 				E95A56EC28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */,
+				E9EEEB7428D89836008C165D /* MediaItemCollectionViewController.swift in Sources */,
 				E95A56F828C7F54E0096333F /* MediaItemListView.swift in Sources */,
 				E95A56F328C7ED850096333F /* MediaItem.swift in Sources */,
 			);
@@ -544,7 +550,7 @@
 			repositoryURL = "git@github.com:jjotaum/AmuseKit.git";
 			requirement = {
 				kind = exactVersion;
-				version = 0.4.1;
+				version = 0.4.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

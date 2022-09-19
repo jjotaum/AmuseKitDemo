@@ -11,35 +11,47 @@ extension MediaItemCollectionDetailsView {
     struct Model {
         let title: String?
         let artworkURL: URL?
-        let items: [MediaItem]
+        var items: [MediaItem]
     }
 }
 
 struct MediaItemCollectionDetailsView: View {
-    @State var model: Model
+    @StateObject var controller: MediaItemCollectionViewController
     
     var body: some View {
-        VStack {
-            AsyncImage(url: model.artworkURL) { image in
-                image.resizable()
-            } placeholder: {
-                Rectangle()
-            }
-            .aspectRatio(contentMode: .fit)
-            List {
-                ForEach(model.items, id: \.id) { mediaItem in
+        List {
+            Section {
+                ForEach(controller.model.items, id: \.id) { mediaItem in
                     MediaItemListView(model: .init(title: mediaItem.title,
                                                    subTitle: mediaItem.subTitle,
                                                    artworkURL: mediaItem.thumbURL))
                 }
+            } header: {
+                AsyncImage(url: controller.model.artworkURL) { image in
+                    image.resizable()
+                } placeholder: {
+                    Rectangle()
+                }
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(16)
+                .padding(.bottom)
             }
         }
-        .navigationTitle(model.title ?? "<Unknown>")
+        .navigationTitle(controller.model.title ?? "<Unknown>")
+        .onAppear {
+            controller.onAppear()
+        }
     }
 }
 
 struct CollectionDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaItemCollectionDetailsView(model: .init(title: "Title", artworkURL: nil, items: []))
+        MediaItemCollectionDetailsView(
+            controller: .init(
+                id: "1",
+                title: "Title",
+                artworkURL: nil,
+                items: [])
+        )
     }
 }

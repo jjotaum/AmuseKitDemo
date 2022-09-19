@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E919051F28D8D22400386592 /* AmuseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919051E28D8D22400386592 /* AmuseKit.swift */; };
+		E919052028D8D22400386592 /* AmuseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919051E28D8D22400386592 /* AmuseKit.swift */; };
 		E95A56EB28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */; };
 		E95A56EC28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */; };
 		E95A56EF28C7ED7D0096333F /* MediaItemCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EE28C7ED7D0096333F /* MediaItemCollection.swift */; };
@@ -30,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E919051E28D8D22400386592 /* AmuseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseKit.swift; sourceTree = "<group>"; };
 		E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollectionDetailsView.swift; sourceTree = "<group>"; };
 		E95A56EE28C7ED7D0096333F /* MediaItemCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollection.swift; sourceTree = "<group>"; };
 		E95A56F128C7ED850096333F /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
@@ -64,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E919051D28D8D20900386592 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E919051E28D8D22400386592 /* AmuseKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E95A56ED28C7ED660096333F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +113,7 @@
 		E996534528C2B32800D279A3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E919051D28D8D20900386592 /* Extensions */,
 				E95A56ED28C7ED660096333F /* Models */,
 				E996536B28C2B36800D279A3 /* Controllers */,
 				E996536428C2B33400D279A3 /* Views */,
@@ -265,6 +277,7 @@
 				E95A56EF28C7ED7D0096333F /* MediaItemCollection.swift in Sources */,
 				E996535628C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536D28C2B37700D279A3 /* MainViewController.swift in Sources */,
+				E919051F28D8D22400386592 /* AmuseKit.swift in Sources */,
 				E95A56EB28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */,
 				E9EEEB7328D89836008C165D /* MediaItemCollectionViewController.swift in Sources */,
 				E95A56F728C7F54E0096333F /* MediaItemListView.swift in Sources */,
@@ -280,6 +293,7 @@
 				E95A56F028C7ED7D0096333F /* MediaItemCollection.swift in Sources */,
 				E996535728C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */,
+				E919052028D8D22400386592 /* AmuseKit.swift in Sources */,
 				E95A56EC28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */,
 				E9EEEB7428D89836008C165D /* MediaItemCollectionViewController.swift in Sources */,
 				E95A56F828C7F54E0096333F /* MediaItemListView.swift in Sources */,

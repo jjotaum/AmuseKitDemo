@@ -48,6 +48,7 @@ struct CollectionDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         MediaItemCollectionDetailsView(
             controller: .init(
+                dataProvider: .shared(),
                 id: "1",
                 title: "Title",
                 artworkURL: nil,

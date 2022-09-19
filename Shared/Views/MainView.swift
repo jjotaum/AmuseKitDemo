@@ -20,8 +20,8 @@ extension MainView {
 }
 
 struct MainView: View {
-    private var player = AVPlayer()
-    @StateObject var controller = MainViewController()
+    var player = AVPlayer()
+    @StateObject var controller: MainViewController
     @State var queryText: String = ""
     
     var body: some View {
@@ -70,7 +70,7 @@ struct MainView: View {
         if let mediaCollection = mediaItem as? MediaItemCollection {
             NavigationLink {
                 MediaItemCollectionDetailsView(
-                    controller: .init(dataProvider: controller.amuseProvider,
+                    controller: .init(dataProvider: controller.dataProvider,
                                       id: mediaItem.id,
                                       title: mediaCollection.title,
                                       artworkURL: mediaCollection.artworkURL,
@@ -118,6 +118,6 @@ struct SectionView<Content: View>: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(controller: .init(dataProvider: .shared()))
     }
 }

@@ -10,24 +10,18 @@ import Combine
 import Foundation
 
 class MainViewController: ObservableObject {
-    static let devToken = "YOUR_DEV_TOKEN_HERE"
+    let dataProvider: AmuseKit.DataProvider
     private var subscriptions: Set<AnyCancellable> = []
-    let amuseProvider: AmuseKit.DataProvider
     
     @Published var model: MainView.Model = .init()
     
-    init() {
-        let configuration = AmuseKit.StorageConfiguration(serviceName: "com.jjotaum.akdemo",
-                                                          developerTokenKey: "com.jjotaum.akdemo.dt",
-                                                          userTokenKey: "com.jjotaum.akdemo.utk")
-        amuseProvider = AmuseKit.DataProvider(configuration)
-        amuseProvider.setDeveloperToken(Self.devToken)
-        
+    init(dataProvider: AmuseKit.DataProvider) {
+        self.dataProvider = dataProvider
     }
     
     func search(query: String) {
         do {
-            try amuseProvider.catalogSearch(searchTerm: query)
+            try dataProvider.catalogSearch(searchTerm: query)
                 .sink { _ in
                 } receiveValue: { [weak self] response in
                     guard let strongSelf = self else { return }

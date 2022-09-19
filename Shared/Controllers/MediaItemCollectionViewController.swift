@@ -10,13 +10,13 @@ import Combine
 import Foundation
 
 class MediaItemCollectionViewController: ObservableObject {
-    private let dataProvider: AmuseKit.DataProvider?
+    private let dataProvider: AmuseKit.DataProvider
     private let id: String
     private var subscriptions: Set<AnyCancellable> = []
     
     @Published var model: MediaItemCollectionDetailsView.Model
     
-    init(dataProvider: AmuseKit.DataProvider? = nil,
+    init(dataProvider: AmuseKit.DataProvider,
          id: String,
          title: String,
          artworkURL: URL?,
@@ -30,7 +30,7 @@ class MediaItemCollectionViewController: ObservableObject {
     
     func onAppear() {
         do {
-            try dataProvider?.catalog(.albums, ids: [id]).sink { _ in
+            try dataProvider.catalog(.albums, ids: [id]).sink { _ in
             } receiveValue: { [weak self] response in
                 DispatchQueue.main.async {
                     self?.model.items = response.data?.first?.relationships?.tracks?.data ?? []

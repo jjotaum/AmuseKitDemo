@@ -10,6 +10,8 @@
 - Albums, Artists, Playlists & Stations details view.
 - Plays Songs & MusicVideos previews using `AVPlayer`.
 
+![Demo](https://github.com/jjotaum/AmuseKit/capture.gif)
+
 ### Before Running.
 
 Please go to **MainViewController** class and replace "YOUR_DEV_TOKEN_HERE" text with your MusicKit developer token, now run the app & enjoy.

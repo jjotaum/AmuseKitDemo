@@ -11,7 +11,13 @@ import SwiftUI
 struct AmuseKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(controller: .init(dataProvider: .shared()))
+            MainView()
         }
+    }
+}
+
+extension MainView {
+    init() {
+        self.init(controller: .init(dataProvider: .shared(), mediaPlayer: .init()))
     }
 }

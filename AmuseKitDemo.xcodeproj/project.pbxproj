@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E919051F28D8D22400386592 /* AmuseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919051E28D8D22400386592 /* AmuseKit.swift */; };
 		E919052028D8D22400386592 /* AmuseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919051E28D8D22400386592 /* AmuseKit.swift */; };
+		E919052228D8DF6A00386592 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919052128D8DF6A00386592 /* MediaType.swift */; };
+		E919052328D8DF6A00386592 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919052128D8DF6A00386592 /* MediaType.swift */; };
+		E919052628D8E28800386592 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919052528D8E28800386592 /* SectionView.swift */; };
+		E919052728D8E28800386592 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919052528D8E28800386592 /* SectionView.swift */; };
 		E95A56EB28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */; };
 		E95A56EC28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */; };
 		E95A56EF28C7ED7D0096333F /* MediaItemCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56EE28C7ED7D0096333F /* MediaItemCollection.swift */; };
@@ -33,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		E919051E28D8D22400386592 /* AmuseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseKit.swift; sourceTree = "<group>"; };
+		E919052128D8DF6A00386592 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
+		E919052528D8E28800386592 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		E95A56EA28C7EB2A0096333F /* MediaItemCollectionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollectionDetailsView.swift; sourceTree = "<group>"; };
 		E95A56EE28C7ED7D0096333F /* MediaItemCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollection.swift; sourceTree = "<group>"; };
 		E95A56F128C7ED850096333F /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
@@ -75,11 +81,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E919052428D8E27900386592 /* SectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E919052528D8E28800386592 /* SectionView.swift */,
+			);
+			path = SectionView;
+			sourceTree = "<group>";
+		};
 		E95A56ED28C7ED660096333F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E95A56EE28C7ED7D0096333F /* MediaItemCollection.swift */,
 				E95A56F128C7ED850096333F /* MediaItem.swift */,
+				E919052128D8DF6A00386592 /* MediaType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +158,7 @@
 		E996536428C2B33400D279A3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E919052428D8E27900386592 /* SectionView */,
 				E95A56F528C7F53C0096333F /* MediaItem */,
 				E95A56F428C7F51F0096333F /* MediaItemCollection */,
 				E996536828C2B35500D279A3 /* MainView.swift */,
@@ -273,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E919052228D8DF6A00386592 /* MediaType.swift in Sources */,
 				E996536928C2B35500D279A3 /* MainView.swift in Sources */,
+				E919052628D8E28800386592 /* SectionView.swift in Sources */,
 				E95A56EF28C7ED7D0096333F /* MediaItemCollection.swift in Sources */,
 				E996535628C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536D28C2B37700D279A3 /* MainViewController.swift in Sources */,
@@ -289,7 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E919052328D8DF6A00386592 /* MediaType.swift in Sources */,
 				E996536A28C2B35500D279A3 /* MainView.swift in Sources */,
+				E919052728D8E28800386592 /* SectionView.swift in Sources */,
 				E95A56F028C7ED7D0096333F /* MediaItemCollection.swift in Sources */,
 				E996535728C2B32900D279A3 /* AmuseKitDemoApp.swift in Sources */,
 				E996536E28C2B37700D279A3 /* MainViewController.swift in Sources */,
